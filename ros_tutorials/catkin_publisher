@@ -1,0 +1,76 @@
+user:~$  roscd beginner_tutorials
+user:~/catkin_ws/src/beginner_tutorial
+s$ mkdir scripts
+mkdir: cannot create directory 'scripts': File exists
+user:~/catkin_ws/src/beginner_tutorial
+s$ cd scripts
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$  wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+--2021-07-08 01:20:27--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.github.com (raw.github.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.github.com (raw.github.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py [following]
+--2021-07-08 01:20:27--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2217 (2.2K) [text/plain]
+Saving to: 'talker.py.9'
+
+talker.py.9   0%       0  --.-KB/stalker.py.9 100%   2.17K  --.-KB/sin 0s
+
+2021-07-08 01:20:27 (32.8 MB/s) - 'talker.py.9' saved [2217/2217]
+
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$ chmod +x talker.py
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$ roscd beginner_tutorials/scripts/
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+--2021-07-08 01:20:51--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+Resolving raw.github.com (raw.github.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.github.com (raw.github.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py [following]
+--2021-07-08 01:20:51--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2406 (2.3K) [text/plain]
+Saving to: 'listener.py.9'
+
+listener.py   0%       0  --.-KB/slistener.py 100%   2.35K  --.-KB/sin 0s
+
+2021-07-08 01:20:51 (29.1 MB/s) - 'listener.py.9' saved [2406/2406]
+
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$ chmod +x listener.py
+user:~/catkin_ws/src/beginner_tutorial
+s/scripts$ cd ~/catkin_ws
+user:~/catkin_ws$ catkin_make
+Base path: /home/user/catkin_ws
+Source space: /home/user/catkin_ws/src
+Build space: /home/user/catkin_ws/build
+Devel space: /home/user/catkin_ws/devel
+Install space: /home/user/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/user/catkin_ws/build"
+####
+####
+#### Running command: "make -j16 -l16" in "/home/user/catkin_ws/build"
+####
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_Num
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_AddTwoInts
+[ 15%] Built target beginner_tutorials_generate_messages_nodejs
+[ 30%] Built target beginner_tutorials_generate_messages_lisp
+[ 61%] Built target beginner_tutorials_generate_messages_py
+[ 76%] Built target beginner_tutorials_generate_messages_cpp
+[100%] Built target beginner_tutorials_generate_messages_eus
+[100%] Built target beginner_tutorials_generate_messages
+user:~/catkin_ws$
